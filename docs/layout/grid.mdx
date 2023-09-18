@@ -1,0 +1,64 @@
+---
+title: Grid
+sidebar_position: 2
+---
+
+# Grid
+
+The Grid component implements a layout that arranges child components in a grid.
+
+## Example
+
+```jsx live
+<Grid rows={2} columns={3} rowGap='10px' columnGap='10px'>
+  <BorderBox>Item1</BorderBox>
+  <BorderBox>Item2</BorderBox>
+  <BorderBox>Item3</BorderBox>
+  <BorderBox>Item4</BorderBox>
+  <BorderBox>Item5</BorderBox>
+  <BorderBox>Item6</BorderBox>
+</Grid>
+```
+
+### Grid Template
+
+The default value of row/columnTrackList is `1fr`.
+
+- grid-template-rows: repeat(rows, rowTrackList)
+
+- grid-template-columns: repeat(columns, columnTrackList)
+
+```jsx live
+<Grid
+  rows={2}
+  columns={2}
+  columnTrackList='150px 200px'
+  rowTrackList='80px'
+  rowGap='10px'
+  columnGap='10px'
+>
+  <BorderBox>Item1</BorderBox>
+  <BorderBox>Item2</BorderBox>
+  <BorderBox>Item3</BorderBox>
+  <BorderBox>Item4</BorderBox>
+  <BorderBox>Item5</BorderBox>
+  <BorderBox>Item6</BorderBox>
+  <BorderBox>Item7</BorderBox>
+  <BorderBox>Item8</BorderBox>
+</Grid>
+```
+
+### Gap
+
+You can set the gap for rows and columns respectively.
+
+```jsx live
+<Grid rows={2} columns={3} rowGap='20px' columnGap='10px'>
+  <BorderBox>Item1</BorderBox>
+  <BorderBox>Item2</BorderBox>
+  <BorderBox>Item3</BorderBox>
+  <BorderBox>Item4</BorderBox>
+  <BorderBox>Item5</BorderBox>
+  <BorderBox>Item6</BorderBox>
+</Grid>
+```

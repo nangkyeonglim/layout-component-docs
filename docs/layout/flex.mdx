@@ -1,0 +1,72 @@
+---
+title: Flex
+sidebar_position: 3
+---
+
+# Flex
+
+Flex components implement a layout that flexibly arranges child components.
+
+## Example
+
+```jsx live
+<Flex>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+</Flex>
+```
+
+## Direction
+
+You can set the direction of flex. (`row` | `column`)
+
+```jsx live
+<Flex direction='column'>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+</Flex>
+```
+
+## Justify & Align
+
+You can set the `justify-content`/`align-items` of flex.
+
+```jsx live
+<Flex justify='center' align='center'>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+</Flex>
+```
+
+## Wrap
+
+You can set the `wrap` of flex. (`nowrap` | `wrap` | `wrap-reverse`)
+
+```jsx live
+<Flex wrap='wrap'>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+</Flex>
+```
+
+## Gap
+
+You can set the item's `gap` of flex.
+
+```jsx live
+<Flex gap='10px'>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+  <BorderBox>Item</BorderBox>
+</Flex>
+```
