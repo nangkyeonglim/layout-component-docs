@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_layout_component_docs=self.webpackChunkreact_layout_component_docs||[]).push([[918],{6922:(e,t,c)=>{c.d(t,{Z:()=>a});var r=c(7294),o=c(1798);const a={React:r,...r,...o,BorderBox:e=>{let{children:t}=e;return r.createElement("div",{style:{border:"1px solid black",padding:"1rem 2rem"}},t)}}}}]);

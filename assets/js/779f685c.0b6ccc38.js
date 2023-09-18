@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_layout_component_docs=self.webpackChunkreact_layout_component_docs||[]).push([[805],{9276:t=>{t.exports=JSON.parse('{"title":"Layout","slug":"/category/layout","permalink":"/react-layout-component-docs/docs/category/layout","navigation":{"next":{"title":"Container","permalink":"/react-layout-component-docs/docs/layout/container"}}}')}}]);
