@@ -1,5 +1,10 @@
 import React from 'react';
 import * as Layout from '@fine1012/react-layout-component';
+import {
+  AiOutlineInfoCircle,
+  AiOutlineExport,
+  AiOutlineHome,
+} from 'react-icons/ai';
 
 const BorderBox = ({ children }) => {
   return (
@@ -14,5 +19,8 @@ const ReactLiveScope = {
   ...React,
   ...Layout,
   BorderBox,
+  AiOutlineInfoCircle,
+  AiOutlineExport,
+  AiOutlineHome,
 };
 export default ReactLiveScope;

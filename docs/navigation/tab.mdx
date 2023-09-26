@@ -1,0 +1,212 @@
+---
+title: Tab
+sidebar_position: 1
+---
+
+# Tab
+
+Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy.
+
+The components are as follows:
+
+#### TabProvider
+
+It is a provider that wraps `Tabs` and `TabPanels`.<br/>
+It is wrapped in a contextAPI that manages the **current tab index.**
+
+#### Tabs
+
+Group of `Tab`.
+
+ARIA roles:
+
+- `role="tablist"`
+
+#### Tab
+
+Set desired tabId when selecting tab, change color of focused Tab.
+
+ARIA roles:
+
+- `role='tab'`
+- `aria-selected`: Set to true a tab is selected and all other `Tabs` have it set to false.
+- `aria-controls`: Set to the id of its associated `TabPanel`.
+
+#### TabPanels
+
+Group of `TabPanel`.
+
+#### TabPanel
+
+A component that shows only the component corresponding to the selected `tabId`.
+
+ARIA roles:
+
+- `role="tabpanel"`
+- `aria-labelledby`: Set to the id of the `Tab` that labels the `TabPanel`
+
+## Example
+
+```jsx live
+<TabProvider width='400px'>
+  <Tabs>
+    <Tab label='탭1' />
+    <Tab label='탭2' />
+    <Tab label='탭3' />
+  </Tabs>
+  <TabPanels>
+    <TabPanel>탭 1 영역입니다.</TabPanel>
+    <TabPanel>탭 2 영역입니다.</TabPanel>
+    <TabPanel>탭 3 영역입니다.</TabPanel>
+  </TabPanels>
+</TabProvider>
+```
+
+## Icon
+
+You can set the Icon of Tab.
+
+### Label with Icon(column)
+
+Default of `IconDirection` is 'column'.
+
+```jsx live
+<TabProvider width='400px'>
+  <Tabs>
+    <Tab label='탭1' icon={<AiOutlineInfoCircle />} />
+    <Tab label='탭2' icon={<AiOutlineExport />} />
+    <Tab label='탭3' icon={<AiOutlineHome />} />
+  </Tabs>
+  <TabPanels>
+    <TabPanel>탭 1 영역입니다.</TabPanel>
+    <TabPanel>탭 2 영역입니다.</TabPanel>
+    <TabPanel>탭 3 영역입니다.</TabPanel>
+  </TabPanels>
+</TabProvider>
+```
+
+### Label with Icon(row)
+
+```jsx live
+<TabProvider width='400px'>
+  <Tabs>
+    <Tab label='탭1' icon={<AiOutlineInfoCircle />} iconDirection='row' />
+    <Tab label='탭2' icon={<AiOutlineExport />} iconDirection='row' />
+    <Tab label='탭3' icon={<AiOutlineHome />} iconDirection='row' />
+  </Tabs>
+  <TabPanels>
+    <TabPanel>탭 1 영역입니다.</TabPanel>
+    <TabPanel>탭 2 영역입니다.</TabPanel>
+    <TabPanel>탭 3 영역입니다.</TabPanel>
+  </TabPanels>
+</TabProvider>
+```
+
+### Only Icon
+
+```jsx live
+<TabProvider width='400px'>
+  <Tabs>
+    <Tab label='' icon={<AiOutlineInfoCircle />} />
+    <Tab label='' icon={<AiOutlineExport />} />
+    <Tab label='' icon={<AiOutlineHome />} />
+  </Tabs>
+  <TabPanels>
+    <TabPanel>탭 1 영역입니다.</TabPanel>
+    <TabPanel>탭 2 영역입니다.</TabPanel>
+    <TabPanel>탭 3 영역입니다.</TabPanel>
+  </TabPanels>
+</TabProvider>
+```
+
+## Disabled
+
+You can make a tab disabled, then be not clickable.
+
+```jsx live
+<TabProvider width='400px'>
+  <Tabs>
+    <Tab label='탭 가능' />
+    <Tab label='탭 불가' disabled />
+    <Tab label='탭 가능' />
+  </Tabs>
+  <TabPanels>
+    <TabPanel>탭 1 영역입니다.</TabPanel>
+    <TabPanel>탭 2 영역입니다.</TabPanel>
+    <TabPanel>탭 3 영역입니다.</TabPanel>
+  </TabPanels>
+</TabProvider>
+```
+
+## Hidden
+
+You can make a hidden tab.
+
+```jsx live
+<TabProvider width='400px'>
+  <Tabs>
+    <Tab label='탭 가능' />
+    <Tab label='숨겨진 탭' hidden />
+    <Tab label='탭 가능' />
+  </Tabs>
+  <TabPanels>
+    <TabPanel>탭 1 영역입니다.</TabPanel>
+    <TabPanel>탭 2 영역입니다.</TabPanel>
+    <TabPanel>탭 3 영역입니다.</TabPanel>
+  </TabPanels>
+</TabProvider>
+```
+
+## DefaultTab
+
+You can set defaultTab. Just use defaultIndex of Tab.
+
+```jsx live
+<TabProvider width='400px' defaultIndex={1}>
+  <Tabs>
+    <Tab label='탭 1' />
+    <Tab label='디폴트 탭' />
+    <Tab label='탭 2' />
+  </Tabs>
+  <TabPanels>
+    <TabPanel>탭 1 영역입니다.</TabPanel>
+    <TabPanel>디폴트 탭 영역입니다.</TabPanel>
+    <TabPanel>탭 3 영역입니다.</TabPanel>
+  </TabPanels>
+</TabProvider>
+```
+
+## Controlled Tabs
+
+Like form inputs, a tab's state can be controlled. <br/>
+Make sure to include an onChange as well, or else the tabs will not be interactive.
+
+```jsx live
+function ControlledTabs() {
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const handleTabsChange = (index) => {
+    setTabIndex(index);
+  };
+
+  return (
+    <TabProvider width={'400px'} index={tabIndex} onChange={handleTabsChange}>
+      <Tabs>
+        <Tab label='탭 1' />
+        <Tab label='탭 2' />
+        <Tab label='탭 3' />
+        <Tab label='숨겨진 탭' hidden />
+      </Tabs>
+      <TabPanels>
+        <TabPanel>탭1</TabPanel>
+        <TabPanel>탭2</TabPanel>
+        <TabPanel>
+          숨겨진 판넬로 가는 버튼이 있는 탭3
+          <button onClick={() => handleTabsChange(3)}>버튼</button>
+        </TabPanel>
+        <TabPanel>숨겨진 판넬</TabPanel>
+      </TabPanels>
+    </TabProvider>
+  );
+}
+```
