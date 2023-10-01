@@ -1759,10 +1759,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.3.1.tgz#d0fce5d07b0620caa282b5131c297bb60f9d87e6"
   integrity sha512-EsBwpc7hBUJWAsNPBmJy4hxWx12v6bshQsldrVmjxJoc3isbxhOrF2IcCpaXxfvq03NwkI7sbsOLXbYuqF/8Ww==
 
-"@fine1012/react-layout-component@^0.1.8":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@fine1012/react-layout-component/-/react-layout-component-0.1.9.tgz#48a96ae11b24a36ea0485c9f718bcf34915ca94e"
-  integrity sha512-9QFEmieZlz0TuSQ+JFf37daQ5r3BfrZtnDd75c7wWLi1AchS/r3BGn1JTeGU8USuGufNtt5VuGR87AtTqQlP+Q==
+"@fine1012/react-layout-component@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@fine1012/react-layout-component/-/react-layout-component-0.2.2.tgz#070ebc79db146d6e46897ad340595f77c64bb0c4"
+  integrity sha512-vbruuhZ4995t/40XYCU11o8cfoHEIkWZIyhjykX1xC5wRApGZxxW6qzepOXfs6RXlL3Pm+l4o0ujoRdTi0ySUA==
   dependencies:
     "@emotion/react" "^11.11.1"
 
